@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeDrop | Join Our Blood Donor Community</title>
+    
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandPurple: '#b461ba',
+                        brandYellow: '#f9f871',
+                        brandBlue: '#0082be',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg-home {
+            background-image: linear-gradient(rgba(0, 130, 190, 0.85), rgba(180, 97, 186, 0.75)), url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover; background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i data-lucide="droplet" class="text-brandPurple w-8 h-8 fill-brandPurple"></i>
+                    <span class="font-bold text-2xl text-brandBlue tracking-tight">LifeDrop</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-brandBlue font-bold transition duration-200 border-b-2 border-brandBlue pb-1">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-brandBlue font-medium transition duration-200 pb-1">About Us</a>
+                    <a href="volunteer.html" class="text-gray-600 hover:text-brandBlue font-medium transition duration-200 pb-1">Volunteer</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-brandBlue font-medium transition duration-200 pb-1">Contact Us</a>
+                    <a href="volunteer.html" class="bg-brandPurple hover:bg-opacity-90 text-white px-6 py-2 rounded-full font-medium transition duration-300 shadow-md">
+                        Join Now
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brandBlue hover:text-brandPurple focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="index.html" class="text-left px-3 py-2 text-brandBlue font-bold hover:bg-gray-50 rounded-md">Home</a>
+                <a href="about.html" class="text-left px-3 py-2 text-gray-600 hover:text-brandBlue hover:bg-gray-50 rounded-md font-medium">About Us</a>
+                <a href="volunteer.html" class="text-left px-3 py-2 text-gray-600 hover:text-brandBlue hover:bg-gray-50 rounded-md font-medium">Volunteer</a>
+                <a href="contact.html" class="text-left px-3 py-2 text-gray-600 hover:text-brandBlue hover:bg-gray-50 rounded-md font-medium">Contact Us</a>
+                <a href="volunteer.html" class="text-left px-3 py-2 text-brandPurple font-bold hover:bg-gray-50 rounded-md">Join Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow pt-20">
+        <!-- Hero Section -->
+        <section class="hero-bg-home py-24 md:py-32 flex items-center justify-center text-center">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <span class="inline-block py-1 px-3 rounded-full bg-brandYellow text-brandBlue font-bold text-sm tracking-wide mb-6 uppercase shadow-sm">
+                    Every drop counts
+                </span>
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+                    Share the Gift of Life. <br> Become a Hero Today.
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-100 mb-10 max-w-2xl mx-auto font-light">
+                    Join our caring community of volunteers. Your kindness and a few minutes of your time can give someone a second chance at life.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="volunteer.html" class="bg-brandYellow text-brandBlue hover:bg-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg transform hover:-translate-y-1">
+                        Register to Donate
+                    </a>
+                    <a href="about.html" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brandBlue px-8 py-4 rounded-full font-bold text-lg transition duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Donate Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brandBlue mb-4">Why Become a Volunteer?</h2>
+                    <div class="w-24 h-1 bg-brandPurple mx-auto rounded-full mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Blood donation is a safe, simple, and incredibly impactful way to give back to your community. Here is why your contribution matters.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center group">
+                        <div class="w-20 h-20 bg-brandBlue bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brandBlue transition duration-300">
+                            <i data-lucide="heart-pulse" class="w-10 h-10 text-brandBlue group-hover:text-white transition duration-300"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Save Multiple Lives</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            A single donation can be separated into multiple components, meaning your one kind act can help save up to three different people.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center group">
+                        <div class="w-20 h-20 bg-brandPurple bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brandPurple transition duration-300">
+                            <i data-lucide="shield-check" class="w-10 h-10 text-brandPurple group-hover:text-white transition duration-300"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Safe & Supervised</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            The donation process is conducted under strict medical guidelines by trained professionals using sterile, single-use equipment. Your health is our priority.
+                        </p>
+                    </div>
+                    <div class="bg-brandYellow rounded-2xl p-8 border border-yellow-200 shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-2 text-center">
+                        <div class="w-20 h-20 bg-white bg-opacity-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="users" class="w-10 h-10 text-brandBlue"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brandBlue mb-3">Community Support</h3>
+                        <p class="text-brandBlue text-opacity-80 leading-relaxed">
+                            By joining our registry, you ensure that when emergencies strike, hospitals have a ready list of kind individuals they can call upon.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brandBlue mb-4">Voices of Hope</h2>
+                    <div class="w-24 h-1 bg-brandYellow mx-auto rounded-full mb-6"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
+                        <i data-lucide="quote" class="absolute top-6 right-6 w-12 h-12 text-brandYellow opacity-30 fill-brandYellow"></i>
+                        <p class="text-gray-600 italic mb-6 relative z-10 leading-relaxed">
+                            "I was nervous my first time, but the staff was so incredibly kind. It took less time than watching an episode of my favorite show."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-brandPurple text-white rounded-full flex items-center justify-center font-bold text-xl mr-4">S</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Sarah M.</h4>
+                                <p class="text-sm text-brandBlue">First-time Donor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
+                        <i data-lucide="quote" class="absolute top-6 right-6 w-12 h-12 text-brandYellow opacity-30 fill-brandYellow"></i>
+                        <p class="text-gray-600 italic mb-6 relative z-10 leading-relaxed">
+                            "When my daughter was in a critical accident, she needed transfusions. The blood was there because generous strangers donated."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-brandBlue text-white rounded-full flex items-center justify-center font-bold text-xl mr-4">D</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">David T.</h4>
+                                <p class="text-sm text-brandPurple">Grateful Father</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
+                        <i data-lucide="quote" class="absolute top-6 right-6 w-12 h-12 text-brandYellow opacity-30 fill-brandYellow"></i>
+                        <p class="text-gray-600 italic mb-6 relative z-10 leading-relaxed">
+                            "It's such a small sacrifice on my part—just a quick pinch—but it genuinely gives someone else a second chance at life."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-800 text-white rounded-full flex items-center justify-center font-bold text-xl mr-4">E</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Elena R.</h4>
+                                <p class="text-sm text-brandBlue">Regular Volunteer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brandBlue mb-4">Frequently Asked Questions</h2>
+                    <div class="w-24 h-1 bg-brandPurple mx-auto rounded-full mb-6"></div>
+                </div>
+                <div class="space-y-4">
+                    <details class="group bg-gray-50 border border-gray-100 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-brandBlue text-lg">
+                            <span>Does donating blood hurt?</span>
+                            <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-6 h-6 text-brandPurple"></i></span>
+                        </summary>
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            You may feel a slight, brief pinch when the needle is inserted. Most donors find the experience highly rewarding and much easier than expected!
+                        </div>
+                    </details>
+                    <details class="group bg-gray-50 border border-gray-100 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-brandBlue text-lg">
+                            <span>How long does the whole process take?</span>
+                            <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-6 h-6 text-brandPurple"></i></span>
+                        </summary>
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            The actual blood drawing usually takes only 8 to 10 minutes. The entire process takes about 45 minutes to an hour of your time.
+                        </div>
+                    </details>
+                    <details class="group bg-gray-50 border border-gray-100 rounded-xl shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-brandBlue text-lg">
+                            <span>How often can I donate?</span>
+                            <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-6 h-6 text-brandPurple"></i></span>
+                        </summary>
+                        <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                            Healthy individuals can safely donate whole blood every 56 days.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-lucide="droplet" class="text-brandYellow w-6 h-6 fill-brandYellow"></i>
+                        <span class="font-bold text-xl tracking-tight text-white">LifeDrop</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Connecting kind-hearted donors with those in critical need. Together, we can make sure nobody has to wait for a lifesaving transfusion.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brandYellow">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="volunteer.html" class="text-gray-400 hover:text-white transition">Become a Volunteer</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brandYellow">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-brandPurple shrink-0"></i>
+                            Lambhvel Road, Anand - 388001, Gujarat
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="w-5 h-5 mr-2 text-brandPurple shrink-0"></i>
+                            9825714448
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2 text-brandPurple shrink-0"></i>
+                            sohilpandya.mca@charusat.ac.in
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brandYellow">Spread the Word</h4>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.instagram.com/sohil_pandya" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brandPurple transition duration-300" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/thecharusat" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brandBlue transition duration-300" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 LifeDrop NGO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        lucide.createIcons();
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>

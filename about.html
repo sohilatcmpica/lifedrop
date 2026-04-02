@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | LifeDrop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { brandPurple: '#b461ba', brandYellow: '#f9f871', brandBlue: '#0082be', }, fontFamily: { sans: ['Roboto', 'sans-serif'], } } }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg-about {
+            background-image: linear-gradient(rgba(0, 130, 190, 0.9), rgba(180, 97, 186, 0.85)), url('https://images.unsplash.com/photo-1593113565694-c202d610666b?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover; background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i data-lucide="droplet" class="text-brandPurple w-8 h-8 fill-brandPurple"></i>
+                    <span class="font-bold text-2xl text-brandBlue tracking-tight">LifeDrop</span>
+                </a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-brandBlue font-medium transition duration-200 pb-1">Home</a>
+                    <a href="about.html" class="text-brandBlue font-bold transition duration-200 border-b-2 border-brandBlue pb-1">About Us</a>
+                    <a href="volunteer.html" class="text-gray-600 hover:text-brandBlue font-medium transition duration-200 pb-1">Volunteer</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-brandBlue font-medium transition duration-200 pb-1">Contact Us</a>
+                    <a href="volunteer.html" class="bg-brandPurple hover:bg-opacity-90 text-white px-6 py-2 rounded-full font-medium transition duration-300 shadow-md">Join Now</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brandBlue hover:text-brandPurple focus:outline-none"><i data-lucide="menu" class="w-8 h-8"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="index.html" class="text-left px-3 py-2 text-gray-600 hover:text-brandBlue hover:bg-gray-50 rounded-md font-medium">Home</a>
+                <a href="about.html" class="text-left px-3 py-2 text-brandBlue font-bold hover:bg-gray-50 rounded-md">About Us</a>
+                <a href="volunteer.html" class="text-left px-3 py-2 text-gray-600 hover:text-brandBlue hover:bg-gray-50 rounded-md font-medium">Volunteer</a>
+                <a href="contact.html" class="text-left px-3 py-2 text-gray-600 hover:text-brandBlue hover:bg-gray-50 rounded-md font-medium">Contact Us</a>
+                <a href="volunteer.html" class="text-left px-3 py-2 text-brandPurple font-bold hover:bg-gray-50 rounded-md">Join Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <section class="hero-bg-about py-20 flex items-center justify-center text-center">
+            <div class="max-w-3xl mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-black text-white mb-6">We are Saving Lives</h1>
+                <p class="text-lg md:text-xl text-gray-100 font-light">Learn about our commitment to ensuring that every patient receives the lifesaving blood they need, exactly when they need it.</p>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="md:flex items-center gap-16">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" alt="Medical professional" class="rounded-2xl shadow-xl w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <span class="text-brandPurple font-bold uppercase tracking-wider text-sm mb-2 block">Our Story</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-brandBlue mb-6">Born from Compassion</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            LifeDrop was founded on a simple but powerful belief: no one should ever have to lose a loved one because of a blood shortage. As an NGO, we bridge the gap between kind-hearted volunteers and the hospitals that rely on them.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                            We work directly within our local communities to spread awareness, dismiss the myths surrounding blood donation, and build a reliable registry of ready-to-help heroes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-brandBlue mb-12">Our Core Values</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="w-16 h-16 bg-brandPurple bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="heart" class="text-brandPurple w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Compassion</h3>
+                        <p class="text-gray-600">We treat every donor and recipient with the utmost empathy and respect, recognizing the profound humanity in this process.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="w-16 h-16 bg-brandBlue bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="shield" class="text-brandBlue w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Integrity & Safety</h3>
+                        <p class="text-gray-600">We strictly align with medical science regulations. The safety of our volunteers and the confidentiality of their data is absolute.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="w-16 h-16 bg-brandYellow bg-opacity-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="users" class="text-brandBlue w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Community First</h3>
+                        <p class="text-gray-600">We believe in the power of local people helping local people. A strong community is a healthy community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-lucide="droplet" class="text-brandYellow w-6 h-6 fill-brandYellow"></i>
+                        <span class="font-bold text-xl tracking-tight text-white">LifeDrop</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Connecting kind-hearted donors with those in critical need.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brandYellow">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="volunteer.html" class="text-gray-400 hover:text-white transition">Become a Volunteer</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brandYellow">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-2 text-brandPurple shrink-0"></i>Lambhvel Road, Anand - 388001, Gujarat</li>
+                        <li class="flex items-center"><i data-lucide="phone" class="w-5 h-5 mr-2 text-brandPurple shrink-0"></i>9825714448</li>
+                        <li class="flex items-center"><i data-lucide="mail" class="w-5 h-5 mr-2 text-brandPurple shrink-0"></i>sohilpandya.mca@charusat.ac.in</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brandYellow">Spread the Word</h4>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.instagram.com/sohil_pandya" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brandPurple transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/thecharusat" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brandBlue transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        lucide.createIcons();
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>

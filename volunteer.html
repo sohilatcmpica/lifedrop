@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer | LifeDrop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { brandPurple: '#b461ba', brandYellow: '#f9f871', brandBlue: '#0082be', }, fontFamily: { sans: ['Roboto', 'sans-serif'], } } }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .form-input:focus { outline: none; border-color: #0082be; box-shadow: 0 0 0 3px rgba(0, 130, 190, 0.2); }
+        .hero-bg-volunteer {
+            background-image: linear-gradient(rgba(0, 130, 190, 0.8), rgba(180, 97, 186, 0.9)), url('https://images.unsplash.com/photo-1536856136534-bb679c52a9aa?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover; background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i data-lucide="droplet" class="text-brandPurple w-8 h-8 fill-brandPurple"></i>
+                    <span class="font-bold text-2xl text-brandBlue tracking-tight">LifeDrop</span>
+                </a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-brandBlue font-medium transition duration-200 pb-1">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-brandBlue font-medium transition duration-200 pb-1">About Us</a>
+                    <a href="volunteer.html" class="text-brandBlue font-bold transition duration-200 border-b-2 border-brandBlue pb-1">Volunteer</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-brandBlue font-medium transition duration-200 pb-1">Contact Us</a>
+                    <a href="volunteer.html" class="bg-brandPurple hover:bg-opacity-90 text-white px-6 py-2 rounded-full font-medium transition duration-300 shadow-md">Join Now</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brandBlue hover:text-brandPurple focus:outline-none"><i data-lucide="menu" class="w-8 h-8"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="index.html" class="text-left px-3 py-2 text-gray-600 hover:text-brandBlue hover:bg-gray-50 rounded-md font-medium">Home</a>
+                <a href="about.html" class="text-left px-3 py-2 text-gray-600 hover:text-brandBlue hover:bg-gray-50 rounded-md font-medium">About Us</a>
+                <a href="volunteer.html" class="text-left px-3 py-2 text-brandBlue font-bold hover:bg-gray-50 rounded-md">Volunteer</a>
+                <a href="contact.html" class="text-left px-3 py-2 text-gray-600 hover:text-brandBlue hover:bg-gray-50 rounded-md font-medium">Contact Us</a>
+                <a href="volunteer.html" class="text-left px-3 py-2 text-brandPurple font-bold hover:bg-gray-50 rounded-md">Join Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <section class="hero-bg-volunteer py-20 flex items-center justify-center text-center">
+            <div class="max-w-3xl mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-black text-white mb-6">Become a Volunteer</h1>
+                <p class="text-lg md:text-xl text-gray-100 font-light">Join the registry. When your specific blood type is needed in an emergency, we'll reach out.</p>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-2/5 bg-brandBlue text-white p-10 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">Join the Registry</h3>
+                                <p class="text-blue-100 mb-8">Add your name to our list of heroes. We will only contact you when there is a specific need.</p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start"><i data-lucide="check-circle-2" class="w-6 h-6 text-brandYellow mr-3 flex-shrink-0"></i><span class="text-sm">Data is confidential.</span></li>
+                                    <li class="flex items-start"><i data-lucide="check-circle-2" class="w-6 h-6 text-brandYellow mr-3 flex-shrink-0"></i><span class="text-sm">Right to decline anytime.</span></li>
+                                    <li class="flex items-start"><i data-lucide="check-circle-2" class="w-6 h-6 text-brandYellow mr-3 flex-shrink-0"></i><span class="text-sm">Must be in good health.</span></li>
+                                </ul>
+                            </div>
+                            <div class="mt-12 hidden md:block">
+                                <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=800" alt="Caring hands" class="rounded-xl opacity-90">
+                            </div>
+                        </div>
+                        <div class="md:w-3/5 p-10">
+                            <div id="success-message" class="hidden h-full flex flex-col items-center justify-center text-center space-y-4 py-10">
+                                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                                    <i data-lucide="check" class="w-10 h-10 text-green-600"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold text-brandBlue">Thank You, Hero!</h3>
+                                <p class="text-gray-600">Your information has been securely added to our volunteer registry.</p>
+                                <button onclick="resetForm()" class="mt-6 text-brandPurple font-medium hover:underline">Register another person</button>
+                            </div>
+                            <form id="volunteer-form" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                                        <input type="text" required class="form-input w-full px-4 py-3 rounded-lg border border-gray-300">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+                                        <input type="tel" required class="form-input w-full px-4 py-3 rounded-lg border border-gray-300">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                        <input type="email" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Blood Group *</label>
+                                        <select required class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 bg-white">
+                                            <option value="" disabled selected>Select type</option>
+                                            <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                                            <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+                                            <option>Unknown</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">City / Neighborhood *</label>
+                                    <input type="text" required class="form-input w-full px-4 py-3 rounded-lg border border-gray-300">
+                                </div>
+                                <div class="flex items-start mt-6">
+                                    <div class="flex items-center h-5">
+                                        <input id="health-confirm" type="checkbox" required class="w-5 h-5 text-brandBlue border-gray-300 rounded focus:ring-brandBlue">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="health-confirm" class="font-medium text-gray-700">Health Declaration *</label>
+                                        <p class="text-gray-500 text-xs mt-1">I acknowledge that I am generally healthy. Final eligibility determined by medical professionals.</p>
+                                    </div>
+                                </div>
+                                <div class="pt-4">
+                                    <button type="submit" class="w-full bg-brandPurple hover:bg-opacity-90 text-white font-bold text-lg py-4 rounded-xl transition duration-300 shadow-lg flex justify-center items-center">
+                                        <i data-lucide="heart" class="w-5 h-5 mr-2"></i> Enroll as Volunteer
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-lucide="droplet" class="text-brandYellow w-6 h-6 fill-brandYellow"></i>
+                        <span class="font-bold text-xl tracking-tight text-white">LifeDrop</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Connecting kind-hearted donors with those in critical need.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brandYellow">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="volunteer.html" class="text-gray-400 hover:text-white transition">Become a Volunteer</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brandYellow">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-2 text-brandPurple shrink-0"></i>Lambhvel Road, Anand - 388001, Gujarat</li>
+                        <li class="flex items-center"><i data-lucide="phone" class="w-5 h-5 mr-2 text-brandPurple shrink-0"></i>9825714448</li>
+                        <li class="flex items-center"><i data-lucide="mail" class="w-5 h-5 mr-2 text-brandPurple shrink-0"></i>sohilpandya.mca@charusat.ac.in</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-brandYellow">Spread the Word</h4>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.instagram.com/sohil_pandya" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brandPurple transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/thecharusat" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brandBlue transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        lucide.createIcons();
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+
+        const form = document.getElementById('volunteer-form');
+        const successMessage = document.getElementById('success-message');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            form.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        });
+        function resetForm() {
+            form.reset();
+            successMessage.classList.add('hidden');
+            form.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
